@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,14 +17,64 @@
                     <view key="view" contentMode="scaleToFill" id="Mjw-Ci-H8b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-Vf-WRi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zN7-Rg-gSE">
+                                        <rect key="frame" x="8" y="10" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="WKT-k7-wl2"/>
+                                            <constraint firstAttribute="width" constant="80" id="juI-7z-QVg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RhQ-vp-OBR">
+                                        <rect key="frame" x="96" y="10" width="271" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RhQ-vp-OBR" secondAttribute="trailing" constant="8" id="5Ma-fz-QhJ"/>
+                                    <constraint firstItem="RhQ-vp-OBR" firstAttribute="leading" secondItem="zN7-Rg-gSE" secondAttribute="trailing" constant="8" id="9Nu-xJ-snL"/>
+                                    <constraint firstAttribute="bottom" secondItem="RhQ-vp-OBR" secondAttribute="bottom" constant="10" id="DK9-Ie-qSk"/>
+                                    <constraint firstItem="zN7-Rg-gSE" firstAttribute="top" secondItem="fTf-Vf-WRi" secondAttribute="top" constant="10" id="JZM-m0-G5j"/>
+                                    <constraint firstAttribute="height" constant="100" id="LgW-tc-wN3"/>
+                                    <constraint firstAttribute="bottom" secondItem="zN7-Rg-gSE" secondAttribute="bottom" constant="10" id="Siq-aZ-n54"/>
+                                    <constraint firstItem="RhQ-vp-OBR" firstAttribute="top" secondItem="fTf-Vf-WRi" secondAttribute="top" constant="10" id="cKt-Ik-hqF"/>
+                                    <constraint firstItem="zN7-Rg-gSE" firstAttribute="leading" secondItem="fTf-Vf-WRi" secondAttribute="leading" constant="8" id="jSk-5X-idE"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMJ-ri-RsY">
+                                <rect key="frame" x="8" y="609" width="359" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ojf-Dg-hoZ"/>
+                                </constraints>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fTf-Vf-WRi" firstAttribute="leading" secondItem="iPT-uM-2nd" secondAttribute="leading" id="3vt-0n-yvx"/>
+                            <constraint firstItem="NMJ-ri-RsY" firstAttribute="leading" secondItem="iPT-uM-2nd" secondAttribute="leading" constant="8" id="64e-rx-lJQ"/>
+                            <constraint firstItem="fTf-Vf-WRi" firstAttribute="top" secondItem="iPT-uM-2nd" secondAttribute="top" id="82t-8Z-cZa"/>
+                            <constraint firstItem="fTf-Vf-WRi" firstAttribute="trailing" secondItem="iPT-uM-2nd" secondAttribute="trailing" id="B0H-D9-d9H"/>
+                            <constraint firstItem="iPT-uM-2nd" firstAttribute="bottom" secondItem="NMJ-ri-RsY" secondAttribute="bottom" constant="8" id="ZBt-Qo-eYb"/>
+                            <constraint firstItem="iPT-uM-2nd" firstAttribute="trailing" secondItem="NMJ-ri-RsY" secondAttribute="trailing" constant="8" id="sLe-xc-KEe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iPT-uM-2nd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="4nn-B1-JAy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dD-TL-bIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="2536"/>
+            <point key="canvasLocation" x="325.60000000000002" y="2535.3823088455774"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H1U-oW-5ew">
@@ -50,5 +100,6 @@
     </scenes>
     <resources>
         <image name="Photo" width="22" height="23"/>
+        <image name="photo-placeholder" width="300" height="250"/>
     </resources>
 </document>

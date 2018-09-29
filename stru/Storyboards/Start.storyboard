@@ -217,9 +217,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="timg" width="512" height="512"/>
+        <image name="timg" width="470" height="340"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w6O-cG-aR3"/>
+        <segue reference="h5B-sD-2dM"/>
     </inferredMetricsTieBreakers>
 </document>

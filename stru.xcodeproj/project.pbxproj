@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		06B235A56BECD5C7CC6C8565 /* Pods_stru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F619CB4E4C9E629E086C333 /* Pods_stru.framework */; };
 		1231BDFF2159049900AC9444 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1231BDFE2159049900AC9444 /* GoogleService-Info.plist */; };
-		124F7E78215E190B0026A19A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 124F7E77215E190B0026A19A /* GoogleService-Info.plist */; };
-		124F7E7A215E19770026A19A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 124F7E79215E19770026A19A /* GoogleService-Info.plist */; };
 		124F7E7C215E56040026A19A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F7E7B215E56040026A19A /* AuthService.swift */; };
 		124F7E7E215E69860026A19A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F7E7D215E69860026A19A /* Config.swift */; };
 		652B51E621563C51003F0DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652B51E521563C51003F0DF9 /* Main.storyboard */; };
@@ -34,8 +32,6 @@
 
 /* Begin PBXFileReference section */
 		1231BDFE2159049900AC9444 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		124F7E77215E190B0026A19A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/4a8003b38e384bae7b0c3afac473f02b/Message/MessageTemp/719d5ac099eb05b8f57bd6f6309220a8/File/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		124F7E79215E19770026A19A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		124F7E7B215E56040026A19A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		124F7E7D215E69860026A19A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C165AFCC3C1EC2D90E822EF /* Pods-stru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stru.release.xcconfig"; path = "Pods/Target Support Files/Pods-stru/Pods-stru.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +112,6 @@
 		6576165C2154C4DF008C7655 = {
 			isa = PBXGroup;
 			children = (
-				124F7E79215E19770026A19A /* GoogleService-Info.plist */,
 				657616672154C4DF008C7655 /* stru */,
 				657616662154C4DF008C7655 /* Products */,
 				4AB8FB9ABED9317610BF5139 /* Pods */,
@@ -141,7 +136,6 @@
 				6576166F2154C4E1008C7655 /* Assets.xcassets */,
 				657616712154C4E1008C7655 /* LaunchScreen.storyboard */,
 				1231BDFE2159049900AC9444 /* GoogleService-Info.plist */,
-				124F7E77215E190B0026A19A /* GoogleService-Info.plist */,
 				657616742154C4E1008C7655 /* Info.plist */,
 			);
 			path = stru;
@@ -215,13 +209,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124F7E7A215E19770026A19A /* GoogleService-Info.plist in Resources */,
 				657616732154C4E1008C7655 /* LaunchScreen.storyboard in Resources */,
 				652B51F021567507003F0DF9 /* Activity.storyboard in Resources */,
 				652B51EE215674CE003F0DF9 /* Discover.storyboard in Resources */,
 				657616702154C4E1008C7655 /* Assets.xcassets in Resources */,
 				6576167B2154C67E008C7655 /* Start.storyboard in Resources */,
-				124F7E78215E190B0026A19A /* GoogleService-Info.plist in Resources */,
 				652B51EA21567409003F0DF9 /* NaviHome.storyboard in Resources */,
 				652B51E621563C51003F0DF9 /* Main.storyboard in Resources */,
 				1231BDFF2159049900AC9444 /* GoogleService-Info.plist in Resources */,

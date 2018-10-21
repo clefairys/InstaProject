@@ -1,3 +1,10 @@
+//
+//  Api.swift
+//  COMP90018G37
+//
+//  Created by Jia Miao on 2018/9/26.
+//  Copyright © 2018年 Group_37. All rights reserved.
+//
 import Foundation
 struct Api {
     static var User = UserApi()

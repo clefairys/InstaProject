@@ -1,3 +1,11 @@
+//
+//  ProfileUserViewController.swift
+//  COMP90018G37
+//
+//  Created by Ti on 29/9/18.
+//  Copyright © 2018 Group_37. All rights reserved.
+//
+
 import UIKit
 import FirebaseAuth
 class ProfileUserViewController: UIViewController {

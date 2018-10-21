@@ -1,3 +1,11 @@
+//
+//  Post.swift
+//  COMP90018G37
+//
+//  Created by iMeigoo on 30/9/18.
+//  Copyright © 2018 Group_37. All rights reserved.
+//
+
 import Foundation
 import FirebaseAuth
 class Post {

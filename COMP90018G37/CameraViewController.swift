@@ -20,7 +20,6 @@ class CameraViewController: UIViewController,CropViewControllerDelegate {
     @IBOutlet weak var removeButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIButton!
     var selectedImage: UIImage?
-    var videoUrl: URL?
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showActionSheet))
@@ -94,7 +93,7 @@ class CameraViewController: UIViewController,CropViewControllerDelegate {
         ProgressHUD.show("Waiting...", interaction: false)
         if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
             let ratio = profileImg.size.width / profileImg.size.height
-            HelperService.uploadDataToServer(data: imageData, videoUrl: self.videoUrl, ratio: ratio, caption: captionTextView.text!, onSuccess: {
+            HelperService.uploadDataToServer(data: imageData, ratio: ratio, caption: captionTextView.text!, onSuccess: {
                 self.clean()
                 self.tabBarController?.selectedIndex = 0
             })

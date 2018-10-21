@@ -17,7 +17,6 @@ class Post {
     var likes: Dictionary<String, Any>?
     var isLiked: Bool?
     var ratio: CGFloat?
-    var videoUrl: String?
     var timestamp: Int?
 }
 
@@ -27,7 +26,6 @@ extension Post {
         post.id = key
         post.caption = dict["caption"] as? String
         post.photoUrl = dict["photoUrl"] as? String
-        post.videoUrl = dict["videoUrl"] as? String
         post.uid = dict["uid"] as? String
         post.likeCount = dict["likeCount"] as? Int
         post.likes = dict["likes"] as? Dictionary<String, Any>
@@ -45,7 +43,4 @@ extension Post {
         return post
     }
     
-    static func transformPostVideo() {
-        
-    }
 }

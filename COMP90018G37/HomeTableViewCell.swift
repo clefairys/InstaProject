@@ -71,19 +71,6 @@ class HomeTableViewCell: UITableViewCell {
             let photoUrl = URL(string: photoUrlString)
             postImageView.sd_setImage(with: photoUrl)
         }
-        if let videoUrlString = post?.videoUrl, let videoUrl = URL(string: videoUrlString) {
-            print("videoUrlString: \(videoUrlString)")
-            self.volumeView.isHidden = false
-            player = AVPlayer(url: videoUrl)
-            playerLayer = AVPlayerLayer(player: player)
-            playerLayer?.frame = postImageView.frame
-            playerLayer?.frame.size.width = UIScreen.main.bounds.width
-            playerLayer?.frame.size.height = UIScreen.main.bounds.width / post!.ratio!
-            self.contentView.layer.addSublayer(playerLayer!)
-            self.volumeView.layer.zPosition = 1
-            player?.play()
-            player?.isMuted = isMuted
-        }
         
         if let timestamp = post?.timestamp {
             print(timestamp)
@@ -116,9 +103,6 @@ class HomeTableViewCell: UITableViewCell {
         }
         
         self.updateLike(post: self.post!)
-        NotificationCenter.default.addObserver(self, selector: #selector(stopVideo), name: NSNotification.Name.init("stopVideo"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(playVideo), name: NSNotification.Name.init("playVideo"), object: nil)
-
 
     }
     @IBAction func volumeButton_TouchUpInSide(_ sender: UIButton) {
@@ -133,19 +117,7 @@ class HomeTableViewCell: UITableViewCell {
         player?.isMuted = isMuted
         
     }
-    
-    @objc func stopVideo() {
-        if player?.rate != 0 {
-            player?.pause()
-        }
-    }
-   
-    @objc func playVideo() {
-        if player?.rate == 0 {
-            player?.play()
-        }
-    }
-    
+      
     func updateLike(post: Post) {
         
         let imageName = post.likes == nil || !post.isLiked! ? "like" : "likeSelected"

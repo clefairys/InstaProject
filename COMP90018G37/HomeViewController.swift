@@ -90,7 +90,7 @@ class HomeViewController: UIViewController, ImagePickerDelegate {
         ProgressHUD.show("Waiting...", interaction: false)
         if let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
             let ratio = profileImg.size.width / profileImg.size.height
-            HelperService.uploadDataToServer(data: imageData, videoUrl: nil, ratio: ratio, caption: "", onSuccess: {
+            HelperService.uploadDataToServer(data: imageData, ratio: ratio, caption: "", onSuccess: {
                 self.dismiss(animated: true, completion: nil)
                 self.posts.removeAll()
                 self.users.removeAll()
@@ -174,17 +174,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             }
 
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.post(name: NSNotification.Name.init("stopVideo"), object: nil)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        NotificationCenter.default.post(name: NSNotification.Name.init("playVideo"), object: nil)
-
     }
 }
 

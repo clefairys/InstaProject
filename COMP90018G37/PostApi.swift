@@ -94,14 +94,10 @@ class PostApi {
     
     func report(_ post: Post, message: String) {
         guard let postId = post.id, let postUid = post.uid, let photoUrl = post.photoUrl else { return }
-        var videoUrl = ""
-        if let video_url = post.videoUrl {
-            videoUrl = video_url
-        }
         let reportDict = ["postId": postId,
                           "postUid": postUid,
-                          "photoUrl": photoUrl,
-                          "videoUrl": videoUrl]
+                          "photoUrl": photoUrl
+                        ]
         let reportRef = Database.database().reference().child("reportPosts")
         reportRef.child(postId).updateChildValues(reportDict)
         let reporterInformation = [Api.User.CURRENT_USER!.uid: message]

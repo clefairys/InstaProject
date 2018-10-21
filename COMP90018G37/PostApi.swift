@@ -1,3 +1,11 @@
+//
+//  PostApi.swift
+//  COMP90018G37
+//
+//  Created by Ti on 29/9/18.
+//  Copyright © 2018 Group_37. All rights reserved.
+//
+
 import Foundation
 import FirebaseDatabase
 class PostApi {

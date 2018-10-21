@@ -1,3 +1,10 @@
+//
+//  FilterViewController.swift
+//  COMP90018G37
+//
+//  Created by Jia on 2018/9/26.
+//  Copyright © 2018年 Group_37. All rights reserved.
+//
 import UIKit
 import CropViewController
 protocol FilterViewControllerDelegate {
